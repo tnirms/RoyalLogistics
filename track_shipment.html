@@ -1,6 +1,7 @@
 <html>
   <body>
     <head>
+      <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="track_shipment.css">
     </head>
     <header>
@@ -14,10 +15,15 @@
     </header>
     <div id='hero'>
       <h2>TRACK SHIPMENT</h2>
-      <h3>Make shipping enquiries using<br>our fast and easy method</h3>
+      <h3 id="subtext">Make shipping enquiries using<br>our fast and easy method</h3>
     </div>
     <h3>Track Your Car</h3>
-    <div><input type='text' placeholder='      Booking Number' id='booking_no'><img src='search-icon.png' id='search_icon'></div>
+    <div>
+      <input type='text' placeholder='Booking Number' id='booking_no'>
+      <button id="search_button">
+        <img src='search-icon.png' id='search_icon'>
+      </button>
+    </div>
     <div><img src='tracking.png' id='tracking_image'></div>
     <div class='location_status'>
       <div class='red_box'></div>
