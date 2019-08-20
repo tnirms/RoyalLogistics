@@ -113,8 +113,8 @@ button {
 .shipping_details {
   background-color: #c0392b;
   width: 450px;
-  height: 40px;
-  margin: 20px 20px 20px 60px;
+  padding: 10px;
+  margin: 20px 80px 20px 40px;
   display: inline-block;
 }
 .sub_heading {
@@ -156,13 +156,13 @@ input {
   color: grey;
 }
 #progress_bar {
-  width: 1000px;
+  width: 800px;
   margin: 20px 40px;
 }
 .car_info {
   border-bottom: 2px solid black;
   font-size: 18px;
-  line-height: 2.5;
+  line-height: 1.5;
   margin-left: 40px;
   display: block;
   width: 450px;
@@ -172,33 +172,35 @@ input {
   margin-bottom: 40px;
   vertical-align: top;
 }
-.location_status {
+#tracking_image, #tracking_details {
   display: inline-block;
+  vertical-align: top;
 }
-.red_box {
-  width: 130px;
-  height: 100px;
-  background-color: red;
-  position: absolute;
+#tracking_details {
+  margin-left: 16px;
 }
-.white_box1 {
-  width: 120px;
-  height: 48px;
-  position: absolute;
-  border: 1px solid black;
-  background-color: white;
-  z-index: 1;
-  margin-left: 8px;
-  padding-top: 50px;
+#start {
+  margin-bottom: 16px;
 }
-.white_box2 {
-  width: 120px;
-  height: 40px;
-  position: absolute;
-  border: 1px solid black;
-  background-color: white;
-  z-index: 2;
-  margin-left: 8px;
+.location_title {
+  padding: 8px;
+  font-weight: bold;
+  color: white;
+}
+.location {
+  padding: 8px;
+}
+#start > .location_title {
+  background-color: green;
+}
+#start > .location {
+  background-color: lightgreen;
+}
+#finish > .location_title {
+  background-color: crimson;
+}
+#finish > .location {
+  background-color: pink;
 }
 
 
