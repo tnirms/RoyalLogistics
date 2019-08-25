@@ -48,6 +48,9 @@ h2 {
   color: white;
   font-weight: bold;
 }
+.action_button:hover {
+  background-color: #e0594b;
+}
 .button_text {
   font-size: 18px;
 }
@@ -69,11 +72,17 @@ p {
 }
 .info_button {
   background-color: #807d7d;
-  padding: 20px 30px;
+  padding: 10px 30px;
   border-radius: 10px;
   margin: 10px 10px;
   color: white;
   font-weight: bold;
+}
+.info_button:hover {
+  background-color: #a09d9d;
+}
+.action_button, .info_button {
+  transition: background-color 0.2s ease;;
 }
 .all_buttons {
   display: flex;

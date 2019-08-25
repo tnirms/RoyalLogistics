@@ -25,15 +25,29 @@
       </button>
     </div>
     <div id="tracking_info">
-      <img src='images/tracking.png' id='tracking_image'>
+      <img src='https://maps.googleapis.com/maps/api/staticmap?markers=color:green%7CCharlottesville,VA
+      &markers=color:red%7CSan+Francisco,CA&size=640x480&key=AIzaSyA4WDi2OJis6i0C_kRdYT3sCIMocJfl-3Q' id='tracking_image'>
       <div id="tracking_details">
         <div class='location_status' id="start">
-            <div class='location_title'>Origin</div>
-            <div class='location'>Charlottesville, Virginia</div>
+          <div class='location_title'>Origin</div>
+          <div class='location'>
+            300 College Ave <br>
+            Charlottesville, Virginia
+          </div>
+        </div>
+        <div class='location_status' id="current">
+          <div class='location_title'>Current Location</div>
+          <div class='location'>
+            3121 Mossy Creek Dr. <br>
+            Little Rock, Arkansas
+          </div>
         </div>
         <div class='location_status' id="finish">
-            <div class='location_title'>Destination</div>
-            <div class='location'>San Francisco, California</div>
+          <div class='location_title'>Destination</div>
+          <div class='location'>
+              $ 40 Royal Oak. <br>
+              Mountain View, California
+          </div>
         </div>
       </div>
     </div>
@@ -43,7 +57,24 @@
       Order Status: <span class='your_booking'>Out for Delivery</span><br>
       Estimated Arrival: <span class='your_booking'>July 31, 2019</span>
     </div>
-    <img src='images/progress-bar.png' id='progress_bar'>
+    <svg id="delivery_progress" width="800" height="100">
+      <line x1="100" y1="50" x2="300" y2="50" class="complete" />
+      <line x1="300" y1="50" x2="500" y2="50" class="incomplete" />
+      <line x1="500" y1="50" x2="700" y2="50" class="incomplete" />
+      <circle cx="100" cy="50" r="10" class="complete" />
+      <circle cx="300" cy="50" r="10" class="complete" />
+      <circle cx="500" cy="50" r="10" class="incomplete" />
+      <circle cx="700" cy="50" r="10" class="incomplete" />
+      <text x="100" y="20" text-anchor="middle" alignment-baseline="central">Order Received</text>
+      <text x="300" y="20" text-anchor="middle" alignment-baseline="central">Preparing Shipping</text>
+      <text x="500" y="20" text-anchor="middle" alignment-baseline="central">Out For Delivery</text>
+      <text x="700" y="20" text-anchor="middle" alignment-baseline="central">Delivered</text>
+      <text x="100" y="80" text-anchor="middle" alignment-baseline="central">Thursday, August 21</text>
+      <text x="300" y="80" text-anchor="middle" alignment-baseline="central">Friday, August 22</text>
+      <text x="500" y="80" text-anchor="middle" alignment-baseline="central"></text>
+      <text x="700" y="80" text-anchor="middle" alignment-baseline="central"></text>
+
+    </svg>
     <div class='boxes'>
       <div class='shipping_details'>
         <span class='sub_heading'>Car Details</span>

@@ -133,7 +133,6 @@ input {
   margin-bottom: 20px;
 }
 #tracking_image {
-  width: 450px;
   margin-left: 40px;
   margin-bottom: 20px;
 }
@@ -146,10 +145,14 @@ input {
 #search_icon {
   height: 16px;
 }
+#delivery_progress {
+  margin: 15px 40px;
+}
 #booking_details {
   font-weight: bolder;
-  margin: 20px 40px 50px 40px;
+  margin: 10px 40px;
   font-size: 20px;
+  line-height: 1.5em;
 }
 .your_booking {
   font-weight: bolder;
@@ -179,7 +182,7 @@ input {
 #tracking_details {
   margin-left: 16px;
 }
-#start {
+#start, #current {
   margin-bottom: 16px;
 }
 .location_title {
@@ -195,6 +198,12 @@ input {
 }
 #start > .location {
   background-color: lightgreen;
+}
+#current > .location_title {
+  background-color: rgb(51, 83, 172);
+}
+#current > .location {
+  background-color: lightblue;
 }
 #finish > .location_title {
   background-color: crimson;
@@ -246,4 +255,21 @@ input {
 .footer_links {
   margin-right: 70px;
   padding-bottom: 50px;
+}
+
+/* delivery progress svg */
+circle.complete {
+  fill: black;
+}
+line.complete {
+  stroke-width: 2px;
+  stroke: black; 
+}
+circle.incomplete {
+  fill: lightgray
+}
+line.incomplete {
+  stroke-width: 2px;
+  stroke: lightgray;
+  stroke-dasharray: 4;  
 }
