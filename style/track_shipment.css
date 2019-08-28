@@ -56,11 +56,10 @@ h4 {
   color: white;
 }
 #search_button {
-  width: 30px;
-  height: 30px;
+  padding: 9px;
   vertical-align: top;
   background-color: #c0392b;
-  border-radius: 4px;
+  border-radius: 0 4px 4px 0;
 }
 .button_text {
   font-size: 16px;
@@ -76,6 +75,7 @@ h4 {
   line-height: 2;
   display: flex;
   justify-content: space-between;
+  margin-top: 40px;
 }
 p {
   font-size: 18px;
@@ -112,9 +112,9 @@ button {
 }
 .shipping_details {
   background-color: #c0392b;
-  width: 450px;
+  width: 330px;
   padding: 10px;
-  margin: 20px 80px 20px 40px;
+  margin: 20px 20px 20px 40px;
   display: inline-block;
 }
 .sub_heading {
@@ -139,11 +139,12 @@ input {
 #booking_no {
   border: 0px solid lightgrey;
   background-color: #f0eded;
-  border-radius: 5px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
+  font-size: 24px;
 }
 #search_icon {
-  height: 16px;
+  height: 22px;
 }
 #delivery_progress {
   margin: 15px 40px;
@@ -168,7 +169,7 @@ input {
   line-height: 1.5;
   margin-left: 40px;
   display: block;
-  width: 450px;
+  width: 350px;
 }
 .boxes {
   display: inline-block;
@@ -211,7 +212,9 @@ input {
 #finish > .location {
   background-color: pink;
 }
-
+#search_result {
+  display: none;
+}
 
 .download_app {
   width: 120px;

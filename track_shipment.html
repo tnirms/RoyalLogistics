@@ -19,76 +19,70 @@
     </div>
     <h3>Track Your Car</h3>
     <div>
-      <input type='text' placeholder='Booking Number' id='booking_no'>
-      <button id="search_button">
+      <input type='text' placeholder='Booking Number' id='booking_no'><!--
+    --><button id="search_button">
         <img src='images/search-icon.png' id='search_icon'>
       </button>
     </div>
-    <div id="tracking_info">
-      <img src='https://maps.googleapis.com/maps/api/staticmap?markers=color:green%7CCharlottesville,VA&markers=anchor:center%7Cicon:https://tnirms.github.io/RoyalLogistics/images/car-icon.png%7CLittle+Rock,AR
-      &markers=color:red%7CSan+Francisco,CA&size=640x480&key=AIzaSyA4WDi2OJis6i0C_kRdYT3sCIMocJfl-3Q' id='tracking_image'>
-      <div id="tracking_details">
-        <div class='location_status' id="start">
-          <div class='location_title'>Origin</div>
-          <div class='location'>
-            Charlottesville, Virginia
+    <div id="search_result">
+      <div id="tracking_info">
+        <img src='' id='tracking_image'>
+        <div id="tracking_details">
+          <div class='location_status' id="start">
+            <div class='location_title'>Origin</div>
+            <div class='location'>
+            </div>
           </div>
-        </div>
-        <div class='location_status' id="current">
-          <div class='location_title'>Current Location</div>
-          <div class='location'>
-            Little Rock, Arkansas
+          <div class='location_status' id="current">
+            <div class='location_title'>Current Location</div>
+            <div class='location'>
+            </div>
           </div>
-        </div>
-        <div class='location_status' id="finish">
-          <div class='location_title'>Destination</div>
-          <div class='location'>
-            Mountain View, California
+          <div class='location_status' id="finish">
+            <div class='location_title'>Destination</div>
+            <div class='location'>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div id='booking_details'>
-      Booking Number: <span class='your_booking'>123456</span><br>
-      Order Status: <span class='your_booking'>Out for Delivery</span><br>
-      Estimated Arrival: <span class='your_booking'>July 31, 2019</span>
-    </div>
-    <svg id="delivery_progress" width="800" height="100">
-      <line x1="100" y1="50" x2="300" y2="50" class="complete" />
-      <line x1="300" y1="50" x2="500" y2="50" class="incomplete" />
-      <line x1="500" y1="50" x2="700" y2="50" class="incomplete" />
-      <circle cx="100" cy="50" r="10" class="complete" />
-      <circle cx="300" cy="50" r="10" class="complete" />
-      <circle cx="500" cy="50" r="10" class="incomplete" />
-      <circle cx="700" cy="50" r="10" class="incomplete" />
-      <text x="100" y="20" text-anchor="middle" alignment-baseline="central">Order Received</text>
-      <text x="300" y="20" text-anchor="middle" alignment-baseline="central">Preparing Shipping</text>
-      <text x="500" y="20" text-anchor="middle" alignment-baseline="central">Out For Delivery</text>
-      <text x="700" y="20" text-anchor="middle" alignment-baseline="central">Delivered</text>
-      <text x="100" y="80" text-anchor="middle" alignment-baseline="central">Thursday, August 21</text>
-      <text x="300" y="80" text-anchor="middle" alignment-baseline="central">Friday, August 22</text>
-      <text x="500" y="80" text-anchor="middle" alignment-baseline="central"></text>
-      <text x="700" y="80" text-anchor="middle" alignment-baseline="central"></text>
-
-    </svg>
-    <div class='boxes'>
-      <div class='shipping_details'>
-        <span class='sub_heading'>Car Details</span>
+      <div id='booking_details'>
+        Booking Number: <span class="your_booking" id='booking'></span><br>
+        Order Status: <span class="your_booking" id='status'></span><br>
+        Estimated Arrival: <span class="your_booking" id='eta'></span>
       </div>
-      <div>
-        <span class='car_info'>Car Make: Nissan</span><br>
-        <span class='car_info'>Model: Altima</span><br>
-        <span class='car_info'>License Number: A123</span>
+      <svg id="delivery_progress" width="800" height="100">
+        <line x1="100" y1="70" x2="300" y2="70" class="incomplete" stage=2 />
+        <line x1="300" y1="70" x2="500" y2="70" class="incomplete" stage=3 />
+        <line x1="500" y1="70" x2="700" y2="70" class="incomplete" stage=4 />
+        <circle cx="100" cy="70" r="10" class="incomplete" stage=1 />
+        <circle cx="300" cy="70" r="10" class="incomplete" stage=2 />
+        <circle cx="500" cy="70" r="10" class="incomplete" stage=3 />
+        <circle cx="700" cy="70" r="10" class="incomplete" stage=4 />
+        <text x="100" y="20" text-anchor="middle" alignment-baseline="central">Order Accepted</text>
+        <text x="300" y="20" text-anchor="middle" alignment-baseline="central">Preparing Shipping</text>
+        <text x="500" y="20" text-anchor="middle" alignment-baseline="central">Out For Delivery</text>
+        <text x="700" y="20" text-anchor="middle" alignment-baseline="central">Delivered</text>
+      </svg><br>
+      <div class='boxes'>
+        <div class='shipping_details'>
+          <span class='sub_heading'>Customer Details</span>
+        </div>
+        <div>
+          <span class='car_info'>Name: </span><br>
+          <span class='car_info'>Phone: </span><br>
+          <span class='car_info'>Email: </span>
+        </div>
       </div>
-    </div>
-    <div class='boxes'>
-      <div class='shipping_details'>
-        <span class='sub_heading'>Shipping Details</span>
-      </div>
-      <div>
-        <span class='car_info'>Ordered By: James M.</span><br>
-        <span class='car_info'>Payment Method: Visa</span>
+      <div class='boxes'>
+        <div class='shipping_details'>
+          <span class='sub_heading'>Car Details</span>
+        </div>
+        <div>
+          <span class='car_info'>Car Make: </span><br>
+          <span class='car_info'>Model: </span><br>
+          <span class='car_info'>Year of Maufacture: </span>
+        </div>
       </div>
     </div>
     <div id='RI_bottom'>
@@ -119,5 +113,70 @@
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+      var API_KEY = "keylP7NNI"+"ewuT4wQQ";
+      function combine(state, city) {
+        result = ""
+        if (state) {
+          if (city) {
+            return city + ", " + state;
+          } else {
+            return state;
+          }
+        } else if (city) {
+          return city;
+        }
+        return "";
+      }
+      function loadBooking() {
+        var booking_no = $("#booking_no").val();
+        $.get("https://api.airtable.com/v0/app9okdzp1jI9HZ2q/Customer%20Records?api_key="+API_KEY+"&filterByFormula=%7BBooking%20Number%7D%20%3D%20"+booking_no, function(data) {
+          if (data.records.length == 0) {
+            alert("Booking number not found!")
+          } else {
+            $("#search_result").show()
+            var fields = data.records[0].fields;
+            $("#booking").text(fields["Booking Number"]);
+            $("#status").text(fields["Order Status"]);
+            $("#eta").text(fields["ETA"]);
+            var stages = ["Order Accepted", "Processing Shipping", "Out For Delivery", "Delivered"];
+            var stage_index = stages.indexOf(fields["Order Status"]) + 1;
+            $("#delivery_progress [stage]").each(function(index, item) {
+              if ($(item).attr("stage") <= stage_index) {
+                $(item).removeClass("incomplete").addClass("complete");
+              }
+            })
+            var start_location = combine(fields["Start State"], fields["Start City"]);
+            var current_location = combine(fields["Current State"], fields["Current City"]);
+            var end_location = combine(fields["End State"], fields["End City"]);
+            $("#start .location").text(start_location);
+            $("#current .location").text(current_location);
+            $("#finish .location").text(end_location);
+            markers = [];
+            start_location = start_location.replace(", ", ",").replace(/ /g, '+')
+            end_location = end_location.replace(", ", ",").replace(/ /g, '+')
+            current_location = current_location.replace(", ", ",").replace(/ /g, '+')
+            markers.push("markers=color:green%7C"+start_location)
+            markers.push("markers=color:red%7C"+end_location)
+            if (current_location) {
+              markers.push("markers=anchor:center%7Cicon:https://tnirms.github.io/RoyalLogistics/images/car-icon.png%7C"+current_location);
+            }
+            var url = "https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyA4WDi2OJis6i0C_kRdYT3sCIMocJfl-3Q&size=600x400&" + markers.join("&");
+            console.log(url)
+            $("#tracking_image").attr("src", url)
+          }
+        })
+      }
+      $("#search_button").click(function() {
+        loadBooking();
+      })
+      $("#booking_no").on("keyup", function(event) {
+        if (event.keyCode === 13) {
+          event.preventDefault();
+          loadBooking();
+        }
+      })      
+    </script>
   </body>
 </html>
