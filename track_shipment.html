@@ -1,12 +1,10 @@
 <html>
   <head>
-    <title>Royal Logitics | Track Shipment</title>
+    <title>Royal Logistics | Track Shipment</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/track_shipment.css">
   </head>
   <body>
-    <head>
-      <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="style/track_shipment.css">
-    </head>
     <header>
       <a href='index.html'><img src='images/royal-logo.png' id='logo'></a>
       <nav>
@@ -72,9 +70,9 @@
           <span class='sub_heading'>Customer Details</span>
         </div>
         <div>
-          <span class='car_info'>Name: </span><br>
-          <span class='car_info'>Phone: </span><br>
-          <span class='car_info'>Email: </span>
+          <span class='car_info'>Name: <span class="your_booking" id='name'></span></span><br>
+          <span class='car_info'>Phone: <span class="your_booking" id='phone'></span></span><br>
+          <span class='car_info'>Email: <span class="your_booking" id='email'></span></span>
         </div>
       </div>
       <div class='boxes'>
@@ -82,9 +80,9 @@
           <span class='sub_heading'>Car Details</span>
         </div>
         <div>
-          <span class='car_info'>Car Make: </span><br>
-          <span class='car_info'>Model: </span><br>
-          <span class='car_info'>Year of Maufacture: </span>
+          <span class='car_info'>Car Make: <span class="your_booking" id='car_make'></span></span><br>
+          <span class='car_info'>Model: <span class="your_booking" id='car_model'></span></span><br>
+          <span class='car_info'>Year of Manufacture: <span class="your_booking" id='year_of_manufacture'></span></span>
         </div>
       </div>
     </div>
@@ -142,6 +140,12 @@
             $("#booking").text(fields["Booking Number"]);
             $("#status").text(fields["Order Status"]);
             $("#eta").text(fields["ETA"]);
+            $("#name").text(fields["First Name"] + " " + fields["Last Name"]);
+            $("#phone").text(fields["Phone"]);
+            $("#email").text(fields["Email"]);
+            $("#car_make").text(fields["Car Make"]);
+            $("#car_model").text(fields["Car Model"]);
+            $("#year_of_manufacture").text(fields["Year of Manufacture"]);
             var stages = ["Order Accepted", "Processing Shipping", "Out For Delivery", "Delivered"];
             var stage_index = stages.indexOf(fields["Order Status"]) + 1;
             $("#delivery_progress [stage]").each(function(index, item) {
